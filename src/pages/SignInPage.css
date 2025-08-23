@@ -1,0 +1,424 @@
+/* Main Container */
+.signin-page-container {
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Header Section */
+.signin-header {
+  padding: 16px 12px 8px;
+  display: flex;
+  align-items: center;
+}
+
+.back-button-signin {
+  background: none;
+  border: none;
+  color: #374151;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.back-button-signin:hover {
+  background-color: #f3f4f6;
+}
+
+/* Content Section */
+.signin-content {
+  flex: 1;
+  padding: 0 12px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title Section */
+.signin-title-section {
+  margin-bottom: 28px;
+}
+
+.signin-main-title {
+  font-size: 26px;
+  font-weight: 500;
+  color: #1f2937;
+  margin: 0 0 6px 0;
+  line-height: 1.2;
+}
+
+.signin-subtitle {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Form Section */
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* Name Fields Row */
+.signin-name-row {
+  display: flex;
+  gap: 10px;
+}
+
+.signin-input-group {
+  flex: 1;
+}
+
+/* Input Fields */
+.signin-input-field {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #374151;
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.signin-input-field:focus {
+  outline: none;
+  border-color: #ffd166;
+  box-shadow: 0 0 0 2px rgba(255, 209, 102, 0.1);
+}
+
+.signin-input-field::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.signin-full-width {
+  width: 100%;
+}
+
+/* Phone Number Field */
+.signin-phone-group {
+  display: flex;
+  gap: 0;
+  align-items: center;
+}
+
+.signin-country-code-selector {
+
+  border: 1px solid #e5e7eb;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  padding: 5.2px;
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  cursor: pointer;
+  min-width: 80px;
+  transition: background-color 0.2s ease;
+}
+
+.signin-country-code-selector:hover {
+  background-color: #f3f4f6;
+}
+
+.signin-country-flag {
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+.signin-chevron-down {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.signin-phone-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+  font-size: 14px;
+  color: #374151;
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.signin-phone-input:focus {
+  outline: none;
+  border-color: #ffd166;
+  box-shadow: 0 0 0 2px rgba(255, 209, 102, 0.1);
+}
+
+.signin-phone-input::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+/* Continue Button */
+.signin-continue-btn {
+  width: 100%;
+  background-color: #ffd166;
+  color: #374151;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 8px;
+}
+
+.signin-continue-btn:hover {
+  background-color: #f59e0b;
+}
+
+.signin-continue-btn:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* Divider */
+.signin-divider {
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
+  position: relative;
+}
+
+.signin-divider::before,
+.signin-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: #e5e7eb;
+}
+
+.signin-divider-text {
+  padding: 0 16px;
+  font-size: 13px;
+  color: #9ca3af;
+  background-color: #fff;
+  font-weight: 500;
+}
+
+/* Social Login Section */
+.signin-social-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.signin-social-btn {
+  width: 100%;
+  background-color: #f3f4f6;
+  color: #374151;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 12px 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.signin-social-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.signin-social-icon {
+  font-size: 16px;
+}
+
+.signin-google-btn:hover {
+  background-color: #fef2f2;
+  border-color: #fecaca;
+}
+
+.signin-apple-btn:hover {
+  background-color: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.signin-facebook-btn:hover {
+  background-color: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+/* Footer Section */
+.signin-footer {
+  text-align: center;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.signin-footer-text {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.signin-link {
+  color: #ffd166;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 3px;
+}
+
+.signin-link:hover {
+  color: #f59e0b;
+  text-decoration: underline;
+}
+
+/* Country Code Popup Styles */
+.signin-country-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.signin-country-popup {
+  background-color: #fff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.signin-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.signin-popup-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.signin-popup-close {
+  font-size: 20px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.signin-popup-close:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.signin-country-list {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.signin-country-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.signin-country-item:hover {
+  background-color: #f9fafb;
+}
+
+.signin-country-item.selected {
+  background-color: #eff6ff;
+}
+
+.signin-country-flag {
+  font-size: 20px;
+  margin-right: 12px;
+  width: 24px;
+  text-align: center;
+}
+
+.signin-country-name {
+  flex: 1;
+  font-size: 15px;
+  color: #374151;
+}
+
+.signin-country-code {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signin-main-title {
+    font-size: 22px;
+  }
+  
+  .signin-subtitle {
+    font-size: 13px;
+  }
+  
+  .signin-input-field,
+  .signin-phone-input {
+    font-size: 14px;
+  }
+  
+  .signin-content {
+    padding: 0 16px 16px;
+  }
+  
+  .signin-country-popup {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  .signin-page-container {
+    max-width: 440px;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  }
+  
+  .signin-content {
+    padding: 0 32px 32px;
+  }
+  
+  .signin-header {
+    padding: 16px 32px 8px;
+  }
+}

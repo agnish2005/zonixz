@@ -1,0 +1,350 @@
+/* CreateAccountPage.css */
+.zonixz-main-container {
+  max-width: 100%;
+  background-color: #ffffff;
+  min-height: auto;
+  padding: 0 8px;
+}
+
+/* Header */
+.zonixz-header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.zonixz-back-arrow-icon {
+  font-size: 24px;
+  color: #333;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.zonixz-brand-logo {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+.zonixz-logo-image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-right: 10px;
+  margin-left: 12px;
+}
+
+.zonixz-logo-symbol {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(45deg, #ffd700, #ffb347);
+  border-radius: 8px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.zonixz-logo-symbol::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(45deg, #4a90e2, #357abd);
+  border-radius: 4px;
+}
+
+.zonixz-brand-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Welcome Section */
+.zonixz-welcome-wrapper {
+  margin: 0 15px 40px 15px;
+}
+
+.zonixz-welcome-heading {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0 0 10px 0;
+}
+
+.zonixz-features-subtitle {
+  font-size: 25px;
+  font-weight: 500;
+  color: #333;
+  margin: 0 0 20px 0;
+  line-height: 1.3;
+}
+
+/* Phone Section */
+.zonixz-phone-wrapper {
+  margin: 0 15px 20px 15px;
+}
+
+.zonixz-phone-label {
+  display: block;
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.zonixz-phone-input-wrapper {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.zonixz-country-code-selector {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+
+  cursor: pointer;
+  position: relative;
+}
+
+.zonixz-country-flag {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.zonixz-chevron-down {
+  margin-left: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.zonixz-mobile-number-input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+}
+
+.zonixz-mobile-number-input::placeholder {
+  color: #999;
+}
+
+/* Country Code Popup */
+.zonixz-country-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.zonixz-country-popup {
+  background-color: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.zonixz-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.zonixz-popup-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+.zonixz-popup-close {
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+}
+
+.zonixz-country-list {
+  max-height: calc(80vh - 60px);
+  overflow-y: auto;
+}
+
+.zonixz-country-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.zonixz-country-item:hover {
+  background-color: #f8f9fa;
+}
+
+.zonixz-country-item.selected {
+  background-color: #e6f7ff;
+}
+
+.zonixz-country-name {
+  flex: 1;
+  margin-left: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+.zonixz-country-code {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Help Section */
+.zonixz-support-section {
+  margin: 0 15px 20px 15px;
+}
+
+.zonixz-support-heading {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.zonixz-support-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.zonixz-support-card {
+  padding: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0b7;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.zonixz-support-card:hover {
+  transform: translateY(-2px);
+}
+
+.zonixz-support-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+.zonixz-support-icon {
+  font-size: 35px;
+  color: #ffd166;
+}
+
+.zonixz-support-card-title {
+  font-size: 14px;
+  color: #333;
+  margin: 0 0 5px 0;
+  font-weight: 500;
+}
+
+.zonixz-support-card-description {
+  font-size: 12px;
+  color: #969292;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Sign In Button */
+.zonixz-signin-button {
+  width: calc(100% - 30px);
+  padding: 10px;
+  background: #ffd166;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  margin: 0 auto 20px auto;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.zonixz-signin-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+.zonixz-signin-button:active {
+  transform: translateY(0);
+}
+
+/* Sign Up Section */
+.zonixz-signup-wrapper {
+  text-align: center;
+}
+
+.zonixz-new-user-text {
+  font-size: 16px;
+  color: #666;
+}
+
+.zonixz-signup-link {
+  font-size: 16px;
+  color: #ffd166;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.zonixz-signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 320px) {
+  .zonixz-main-container {
+    padding: 15px;
+  }
+  
+  .zonixz-welcome-heading {
+    font-size: 18px;
+  }
+  
+  .zonixz-features-subtitle {
+    font-size: 18px;
+  }
+  
+  .zonixz-support-grid {
+    gap: 15px;
+  }
+  
+  .zonixz-support-icon-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .zonixz-support-icon {
+    font-size: 20px;
+  }
+}

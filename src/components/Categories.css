@@ -1,0 +1,68 @@
+/* CategoryMobile.css */
+.category-mobile-section {
+  width: 100%;
+  padding: 20px 8px 10px 8px;
+}
+
+.category-mobile-heading {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.category-mobile-container {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.category-mobile-container::-webkit-scrollbar {
+  display: none;
+}
+
+.category-mobile-item {
+  min-width: 70px;
+  text-align: center;
+  margin: 0 5px;
+  flex-shrink: 0;
+}
+
+.category-mobile-image {
+  width: 60px;
+  height:60px;
+
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.category-mobile-text {
+  font-size: 0.8rem;
+  margin-top: 8px;
+  color: #444;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* Desktop styles (hidden on larger screens) */
+@media (min-width: 801px) {
+  .category-mobile-section {
+    display: none;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 800px) {
+  .category-mobile-section {
+    display: block;
+  }
+}
+
+
+
+
+

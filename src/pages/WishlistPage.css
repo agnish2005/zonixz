@@ -1,0 +1,478 @@
+/* Main Container */
+.ultra_wishlist_container_supreme {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Search Header Styles */
+.ultra_search_header_magnificent {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+  padding: 6px 10px;
+  width: 100%;
+}
+
+.ultra_search_wrapper_fantastic {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+}
+
+.ultra_search_icon_brilliant {
+  color: #9ca3af;
+  margin-right: 12px;
+}
+
+.ultra_search_input_extraordinary {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #374151;
+}
+
+.ultra_search_input_extraordinary::placeholder {
+  color: #9ca3af;
+}
+
+.ultra_filter_button_spectacular {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #374151;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  min-width: 100px;
+}
+
+.ultra_filter_button_spectacular:hover {
+  background-color: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.ultra_filter_icon_amazing {
+  color: #6b7280;
+}
+
+/* Products Grid */
+.ultra_products_grid_phenomenal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 0;
+}
+
+/* Product Card Styles */
+.ultra_product_card_incredible {
+  background: white;
+  
+  overflow: hidden;
+  border: 1px solid #f3f4f6;
+}
+
+
+/* Image Container */
+.ultra_image_container_outstanding {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.ultra_product_image_sublime {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.ultra_product_card_incredible:hover .ultra_product_image_sublime {
+  transform: scale(1.05);
+}
+
+/* Top Purchase Badge */
+.ultra_top_purchase_badge_exceptional {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  padding: 6px 12px;
+  
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+/* Favorite Button */
+.ultra_favorite_button_marvelous {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ultra_favorite_button_marvelous:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+.ultra_heart_icon_wonderful {
+  color: #6b7280;
+  transition: color 0.2s ease;
+}
+
+.ultra_heart_filled_glorious {
+  color: #ef4444 !important;
+}
+
+/* Pagination Dots */
+.ultra_pagination_dots_magnificent {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.ultra_dot_active_brilliant,
+.ultra_dot_inactive_splendid {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.ultra_dot_active_brilliant {
+  background: #f59e0b;
+  box-shadow: 0 2px 4px rgba(245, 158, 11, 0.4);
+}
+
+.ultra_dot_inactive_splendid {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+/* Product Info Section */
+.ultra_product_info_extraordinary {
+  padding: 20px;
+}
+
+.ultra_product_title_fantastic {
+  font-size: 16px;
+  color: #111827;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ultra_product_sku_amazing {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  font-weight: 500;
+}
+
+/* Rating Section */
+.ultra_rating_container_spectacular {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.ultra_rating_number_incredible {
+  font-weight: 600;
+  color: #111827;
+  font-size: 16px;
+}
+
+.ultra_stars_wrapper_outstanding {
+  display: flex;
+  gap: 2px;
+}
+
+.ultra_star_icon_phenomenal {
+  color: #fbbf24;
+  fill: #fbbf24;
+}
+
+.ultra_assurance_badge_marvelous {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  
+}
+
+/* Add this new class for the assurance badge image */
+.ultra_assurance_image_icon {
+  width: 74px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.ultra_assurance_badge_marvelous span:first-child {
+  font-size: 10px;
+}
+
+/* Warranty */
+.ultra_warranty_text_wonderful {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0 0 16px 0;
+}
+
+/* Pricing Section */
+.ultra_pricing_container_glorious {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.ultra_price_wrapper_sublime {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.ultra_currency_symbol_brilliant {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.ultra_price_amount_magnificent {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.ultra_mrp_price_fantastic {
+  color: #9ca3af;
+  font-size: 14px;
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+
+.ultra_discount_badge_extraordinary {
+  color: rgb(13, 158, 57);
+  padding: 4px 0px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* EMI Text */
+.ultra_emi_text_spectacular {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 786px) {
+  .ultra_wishlist_container_supreme {
+    padding: 16px;
+  }
+  
+  .ultra_products_grid_phenomenal {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .ultra_product_card_incredible {
+    max-width: 100%;
+  }
+  
+  .ultra_search_header_magnificent {
+    flex-direction: row;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .ultra_filter_button_spectacular {
+    min-width: 80px;
+    padding: 10px 16px;
+  }
+  
+  .ultra_product_info_extraordinary {
+    padding: 16px;
+  }
+  
+  .ultra_product_title_fantastic {
+    font-size: 15px;
+  }
+  
+  .ultra_price_amount_magnificent {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ultra_wishlist_container_supreme {
+    padding: 0px;
+  }
+  
+  .ultra_products_grid_phenomenal {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+  }
+  
+  .ultra_image_container_outstanding {
+    height: 170px;
+  }
+  
+  .ultra_product_info_extraordinary {
+    padding: 8px;
+  }
+  
+  .ultra_product_title_fantastic {
+    font-size: 11px;
+    line-height: 1.2;
+    margin: 0 0 4px 0;
+  }
+  
+  .ultra_product_sku_amazing {
+    font-size: 9px;
+    margin: 0 0 6px 0;
+  }
+  
+  .ultra_price_amount_magnificent {
+    font-size: 16px;
+  }
+  
+  .ultra_top_purchase_badge_exceptional {
+    font-size: 8px;
+    padding: 2px 6px;
+    top: 0px;
+    left: 0px;
+  }
+  
+  .ultra_search_wrapper_fantastic {
+    padding: 10px 10px;
+  }
+  
+  .ultra_filter_button_spectacular {
+    padding: 8px 10px;
+    min-width: 60px;
+    font-size: 12px;
+  }
+  
+  .ultra_search_input_extraordinary {
+    font-size: 12px;
+  }
+  
+  .ultra_search_icon_brilliant {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+  
+  .ultra_filter_icon_amazing {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .ultra_favorite_button_marvelous {
+    width: 28px;
+    height: 28px;
+    top: 8px;
+    right: 8px;
+  }
+  
+  .ultra_heart_icon_wonderful {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .ultra_rating_number_incredible {
+    font-size: 11px;
+  }
+  
+  .ultra_star_icon_phenomenal {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .ultra_assurance_badge_marvelous {
+    font-size: 7px;
+    padding: 2px 4px;
+  }
+  
+  .ultra_warranty_text_wonderful {
+    font-size: 10px;
+    margin: 0 0 8px 0;
+  }
+  
+  .ultra_emi_text_spectacular {
+    font-size: 10px;
+  }
+  
+  .ultra_currency_symbol_brilliant {
+    font-size: 14px;
+  }
+  
+  .ultra_mrp_price_fantastic {
+    font-size: 10px;
+  }
+  
+  .ultra_discount_badge_extraordinary {
+    font-size: 12px;
+    padding: 0;
+  }
+  
+  .ultra_rating_container_spectacular {
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+  
+  .ultra_pricing_container_glorious {
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+  
+  .ultra_pagination_dots_magnificent {
+    bottom: 6px;
+  }
+  
+  .ultra_dot_active_brilliant,
+  .ultra_dot_inactive_splendid {
+    width: 6px;
+    height: 6px;
+  }
+}

@@ -1,0 +1,103 @@
+/* Main container */
+.toppick-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8px;
+  
+}
+
+/* Title */
+.toppick-title {
+  padding: 0 5px;
+  margin-bottom: 0px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Scroll container */
+.toppick-cards-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 20px; /* Space for scrollbar */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Hide scrollbar for cleaner look (optional) */
+.toppick-cards-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards wrapper */
+.toppick-cards-wrapper {
+  display: flex;
+  gap: 20px;
+  width: max-content; /* Allows horizontal expansion */
+  padding: 10px 0px; /* Padding for visual spacing */
+}
+
+/* Individual card */
+.toppick-card {
+  width: 200px; /* Fixed width for scrollable cards */
+  height: auto;
+  min-width: 200px; /* Prevents card from shrinking */
+  border: 1px solid #e0e0e0;
+
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card image */
+.toppick-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Card content */
+.toppick-card-content {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.toppick-card-title {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #222;
+}
+
+.toppick-card-description {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #666;
+  flex-grow: 1;
+}
+
+.toppick-card-price {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Add to cart button */
+.toppick-card-button {
+  height: 70px;
+  width: 100%;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toppick-card-button:hover {
+  background-color: #0d5bba;
+}

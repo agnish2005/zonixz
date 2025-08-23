@@ -1,0 +1,13 @@
+/* File: src/components/BottomNavigationBar.css */
+.bottom-nav {
+  z-index: 1000;
+}
+
+.MuiBottomNavigationAction-label {
+  font-size: 0.75rem !important;
+}
+
+.MuiBottomNavigationAction-root {
+  min-width: 50px !important;
+  padding: 6px 0 !important;
+}

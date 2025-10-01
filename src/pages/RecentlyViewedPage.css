@@ -1,0 +1,269 @@
+/* Recently Viewed Page Styles */
+.rv-container {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header Styles */
+.rv-header {
+  display: flex;
+  align-items: center;
+  padding: 20px 16px 20px 0px;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.rv-back-button {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.rv-back-icon {
+  font-size: 24px;
+  color: #333333;
+}
+
+.rv-header-title {
+  font-size: 17px;
+  font-weight: 400;
+  color: #333333;
+  margin: 0;
+  text-align: center;
+  flex: 1;
+  margin-right: 40px; /* Compensate for back button space */
+}
+
+/* Content Styles */
+.rv-content {
+  padding: 0 16px 24px 16px;
+}
+
+.rv-browsing-section {
+  margin-bottom: 32px;
+}
+
+.rv-browsing-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.rv-browsing-description {
+  font-size: 11px;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Items List */
+.rv-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rv-item-card {
+  display: flex;
+  background-color: transparent;
+  padding: 0;
+  gap: 16px;
+  padding-bottom: 10px;
+  border-bottom:  1px solid #ddd1d165;
+}
+
+.rv-item-image-container {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #e9ecef;
+}
+
+.rv-item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.rv-item-details {
+  
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+ 
+}
+
+.rv-item-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a90e2;
+  margin: 0 ;
+  line-height: 1.3;
+}
+
+.rv-rating-container {
+  display: flex;
+  gap: 0px;
+  margin-bottom: 0px;
+}
+
+.rv-star {
+  font-size: 15px;
+  color: #ffd900;
+}
+
+.rv-star-filled {
+  color: #ffa500;
+}
+
+.rv-star-empty {
+  color: #ddd;
+}
+
+.rv-price-container {
+  margin-bottom: 0px;
+}
+
+.rv-price {
+  font-size: 15px;
+  font-weight: 500;
+  color: #28a745;
+}
+
+.rv-price-suffix {
+  font-size: 12px;
+  font-weight: 600;
+  color: #28a745;
+}
+
+.rv-last-viewed {
+  font-size: 13px;
+  color: #666666;
+  margin: 0 0 8px 0;
+}
+
+.rv-remove-button {
+  background: none;
+  border: 1px solid #dc3545;
+  color: #dc3545;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.2s ease;
+}
+
+.rv-remove-button:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.rv-remove-button:active {
+  transform: translateY(1px);
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .rv-header {
+    padding: 24px 24px 24px 0px;
+  }
+  
+  .rv-header-title {
+    font-size: 20px;
+  }
+  
+  .rv-content {
+    padding: 0 24px 32px 24px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .rv-browsing-title {
+    font-size: 28px;
+  }
+  
+  .rv-browsing-description {
+    font-size: 16px;
+  }
+  
+  .rv-item-card {
+    gap: 20px;
+  }
+  
+  .rv-item-image-container {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .rv-item-title {
+    font-size: 18px;
+  }
+  
+  .rv-star {
+    font-size: 16px;
+  }
+  
+  .rv-price {
+    font-size: 18px;
+  }
+  
+  .rv-price-suffix {
+    font-size: 18px;
+  }
+  
+  .rv-last-viewed {
+    font-size: 15px;
+  }
+  
+  .rv-remove-button {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
+
+/* Large Mobile Styles */
+@media (min-width: 480px) and (max-width: 767px) {
+  .rv-header {
+    padding: 22px 20px 22px 0px;
+  }
+  
+  .rv-content {
+    padding: 0 20px 28px 20px;
+  }
+  
+  .rv-browsing-title {
+    font-size: 26px;
+  }
+  
+  .rv-browsing-description {
+    font-size: 15px;
+  }
+  
+  .rv-item-card {
+    gap: 18px;
+  }
+  
+  .rv-item-image-container {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .rv-item-title {
+    font-size: 17px;
+  }
+}

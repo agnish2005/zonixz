@@ -1,0 +1,309 @@
+/* Purchase Settings Page - Exact Replica Styles */
+
+/* Page Container */
+.psp-page-container {
+  min-height: 80vh;
+  background-color: #ffffff;
+}
+
+/* Header */
+.psp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px 16px 20px;
+  background-color: #ffffff;
+  border-bottom: none;
+}
+
+.psp-back-btn {
+  background: none;
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.psp-back-clickable:hover {
+  background-color: #f5f5f5;
+  border-radius: 50%;
+}
+
+.psp-back-icon {
+  width: 24px;
+  height: 24px;
+  color: #333333;
+}
+
+.psp-header-title {
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333;
+  margin: 0;
+  text-align: center;
+}
+
+.psp-header-spacer {
+  width: 40px;
+}
+
+/* Content Area */
+.psp-content {
+  padding: 0 20px;
+  padding-top: 24px;
+}
+
+.psp-section {
+  margin-bottom: 40px;
+}
+
+/* Main Title */
+.psp-main-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+}
+
+.psp-payment-title {
+  margin-bottom: 24px;
+}
+
+/* Description */
+.psp-description {
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.z-div{
+    border: 1px solid #e0e0e09a;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* User Card */
+.psp-user-card {
+  border-radius: 8px;
+  padding: 10px 0;
+}
+
+.psp-user-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+  margin: 0 0 8px 0;
+}
+
+.psp-user-address {
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Card Icon */
+.psp-card-icon {
+  width: 28px;
+  height: 20px;
+  color: #666666;
+  margin-right: 12px;
+}
+
+/* Select Payment Button */
+.psp-select-payment-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e09a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.psp-select-payment-btn:hover {
+  background-color: #fafafa;
+}
+
+.psp-btn-left {
+  display: flex;
+  align-items: center;
+}
+
+.psp-btn-text {
+  font-size: 16px;
+  color: #333333;
+  font-weight: 400;
+}
+
+.psp-chevron-right {
+  width: 20px;
+  height: 20px;
+  color: #999999;
+  transform: rotate(180deg);
+}
+
+/* Payment Cards Container */
+.psp-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Individual Payment Card */
+.psp-payment-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.psp-payment-card:last-child {
+  border-bottom: none;
+}
+
+.psp-card-left {
+  display: flex;
+  align-items: center;
+}
+
+.psp-card-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Card Images */
+.psp-card-image {
+  width: 48px;
+  height: 30px;
+  border-radius: 4px;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.psp-visa-card {
+  background: linear-gradient(135deg, #8b5fbf 0%, #e91e63 100%);
+}
+
+.psp-mastercard-card {
+  background: linear-gradient(135deg, #ff6b35 0%, #f7941d 100%);
+}
+
+.psp-mastercard-blue-card {
+  background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+}
+
+/* Mastercard Circles */
+.psp-mc-circles {
+  display: flex;
+  gap: -2px;
+  align-items: center;
+}
+
+.psp-mc-circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.psp-mc-red {
+  background-color: #eb001b;
+  z-index: 2;
+}
+
+.psp-mc-orange {
+  background-color: #ff5f00;
+  margin-left: -6px;
+  z-index: 1;
+}
+
+.psp-mc-red-dark {
+  background-color: #eb001b;
+  z-index: 2;
+}
+
+.psp-mc-orange-light {
+  background-color: #ff9500;
+  margin-left: -6px;
+  z-index: 1;
+}
+
+/* Card Text */
+.psp-card-text {
+  font-size: 16px;
+  color: #333333;
+  font-weight: 400;
+}
+
+/* Delete Button */
+.psp-delete-button {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: #ff4444;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.psp-delete-button:hover {
+  background-color: #ffebee;
+}
+
+.psp-trash-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .psp-content {
+    padding: 0 16px;
+    padding-top: 20px;
+  }
+  
+  .psp-header {
+    padding: 20px 20px 12px 16px;
+  }
+  
+  .psp-section {
+    margin-bottom: 32px;
+  }
+  
+  .psp-user-card {
+    padding: 10px 0;
+  }
+  
+  .psp-payment-card {
+    padding: 16px 0;
+  }
+}
+
+/* Focus States */
+.psp-back-btn:focus,
+.psp-select-payment-btn:focus,
+.psp-delete-button:focus {
+  outline: 2px solid #007aff;
+  outline-offset: 2px;
+}
+
+/* Smooth Transitions */
+* {
+  box-sizing: border-box;
+}
+
+.psp-page-container {
+  transition: all 0.3s ease;
+}

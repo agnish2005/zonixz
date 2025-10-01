@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import { 
   BottomNavigation, 
-  BottomNavigationAction, 
-  Paper 
+  BottomNavigationAction 
 } from '@mui/material';
 import { 
   FiHome, 
@@ -13,7 +12,7 @@ import {
   FiUser 
 } from 'react-icons/fi';
 import { useNavigate, useLocation } from 'react-router-dom';
-
+import './BottomNavigationBar.css';
 
 const BottomNavigationBar = () => {
   const navigate = useNavigate();
@@ -60,21 +59,24 @@ const BottomNavigationBar = () => {
   };
 
   return (
-    <Paper 
-      sx={{ 
+    <div 
+      className="bottom-nav"
+      style={{ 
         position: 'fixed', 
         bottom: 0, 
         left: 0, 
         right: 0,
-        display: { xs: 'block', sm: 'none' },
-        zIndex: 1000
+        display: { xs: 'block', sm: 'none' }
       }} 
-      elevation={3}
     >
       <BottomNavigation
         showLabels
         value={value}
         onChange={handleChange}
+        sx={{
+          backgroundColor: 'white',
+          
+        }}
       >
         <BottomNavigationAction label="Home" icon={<FiHome size={20} />} />
         <BottomNavigationAction label="Categories" icon={<FiGrid size={20} />} />
@@ -82,7 +84,7 @@ const BottomNavigationBar = () => {
         <BottomNavigationAction label="Wishlist" icon={<FiHeart size={20} />} />
         <BottomNavigationAction label="Account" icon={<FiUser size={20} />} />
       </BottomNavigation>
-    </Paper>
+    </div>
   );
 };
 

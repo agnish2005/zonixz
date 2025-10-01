@@ -3,6 +3,11 @@
   z-index: 1000;
 }
 
+.your-element {
+    --Paper-shadow: none !important;
+}
+
+
 .MuiBottomNavigationAction-label {
   font-size: 0.75rem !important;
 }

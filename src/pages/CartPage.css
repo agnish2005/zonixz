@@ -1,7 +1,7 @@
 /* CartPage.css */
 .cart-page {
   max-width: 100%; /* Use full width for better responsiveness */
-  margin: 0 ; /* Center the container horizontally */
+  margin: 0; /* Center the container horizontally */
   padding: 40px 0px 0 0px; /* Added horizontal padding */
   min-height: 100vh;
   position: relative;
@@ -181,9 +181,10 @@
   color: #333;
 }
 
-/* Similar Products */
+/* Similar Products - FIXED OVERFLOW */
 .similar-products {
   margin-bottom: 5px;
+  width: 100%;
 }
 
 .section-title {
@@ -191,15 +192,18 @@
   font-weight: 600;
   color: #333;
   margin: 0 0 0px 0;
+  padding: 0 8px; /* Added padding to align with grid */
 }
 
 .products-grid {
   display: flex;
   gap: 16px;
   overflow-x: auto;
-  padding-bottom: 10px;
+  padding: 0 8px 10px 8px; /* Added horizontal padding */
   -ms-overflow-style: none;
   scrollbar-width: none;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .products-grid::-webkit-scrollbar {
@@ -211,6 +215,8 @@
   border-radius: 12px;
   min-width: 160px;
   flex-shrink: 0;
+  padding: 12px; /* Added padding to contain content */
+  box-sizing: border-box; /* Include padding in width */
 }
 
 .product-image-container {
@@ -221,7 +227,6 @@
 .product-image {
   width: 100%;
   height: 140px;
-  
   object-fit: cover;
 }
 
@@ -297,7 +302,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
- 
 }
 
 .delivery-content {
@@ -362,8 +366,7 @@
   background: white;
   border-radius: 12px;
   padding: 20px;
-  margin-bottom: 125px !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin-bottom: 140px !important;
   border: 1px solid #f5f0f0;
 }
 
@@ -440,21 +443,21 @@
 .sticky-bottom {
   position: fixed;
   bottom: 0;
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Adjust for perfect centering */
-  max-width: 100%; /* Match cart-page max-width */
-  width: 100%; /* Account for padding */
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100%;
+  width: 100%;
   margin-bottom: 50px;
   background: white;
   padding: 10px;
   z-index: 100;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  border: 1px solid #f5f0f0;
   display: flex;
   flex-direction: column;
   gap: 10px;
   box-sizing: border-box;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 /* Responsive Design */
@@ -464,45 +467,45 @@
   }
 
   .sticky-bottom {
-    width: 100%; 
+    width: 100%;
   }
-  
+
   .cart-item {
     padding: 12px;
   }
-  
+
   .item-name {
     font-size: 15px;
   }
-  
+
   .products-grid {
     gap: 12px;
+    padding: 0 8px 10px 8px; /* Consistent padding */
   }
-  
+
   .product-card {
     min-width: 140px;
-    
   }
 
   .order-summary {
     padding: 16px;
     margin-bottom: 16px;
   }
-  
+
   .order-summary-title {
     font-size: 16px;
     margin-bottom: 16px;
   }
-  
+
   .summary-label,
   .summary-value {
     font-size: 13px;
   }
-  
+
   .total-row .summary-label {
     font-size: 15px;
   }
-  
+
   .total-row .summary-value {
     font-size: 16px;
   }
@@ -510,29 +513,77 @@
 
 @media (max-width: 360px) {
   .cart-page {
-    padding: 40px 0px 0px 0px; /* Even smaller padding for very small screens */
+    padding: 40px 0px 0px 0px;
   }
 
   .sticky-bottom {
-    width: 100%; /* Full width on very small screens */
+    width: 100%;
   }
 
   .coupon-section,
   .delivery-info {
     padding: 12px 16px;
   }
-  
+
   .item-controls {
     gap: 8px;
   }
-  
+
   .quantity-controls {
     padding: 2px;
   }
-  
+
   .quantity-btn {
     width: 28px;
     height: 28px;
     font-size: 16px;
+  }
+}
+
+/* Addresses Bottom Sheet */
+.addresses-bottom-sheet {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.addresses-sheet-content {
+  background: white;
+  width: 100%;
+  max-height: 85vh;
+  border-radius: 20px 20px 0 0;
+  animation: slideUp 0.3s ease-out;
+  overflow: hidden;
+}
+
+.addresses-bottom-sheet-content {
+  max-width: 100%;
+  margin: 0;
+  position: relative;
+  height: 100%;
+}
+
+.addresses-bottom-sheet-content .ultra_unique_addresses_container {
+  max-width: 100%;
+  margin: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

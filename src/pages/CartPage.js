@@ -5,6 +5,7 @@ import pa from "../assets/Image/pa.png";
 import pb from "../assets/Image/pb.png";
 import { FiHeart, FiShoppingCart } from "react-icons/fi";
 import { MdHomeFilled } from "react-icons/md";
+import AddressesPage from "./AddressesPage"; // Import the full addresses page
 
 const CartPage = () => {
   const navigate = useNavigate();
@@ -79,9 +80,24 @@ const CartPage = () => {
     },
   ]);
 
+  // State for addresses page as bottom sheet
+  const [showAddressesPage, setShowAddressesPage] = useState(false);
+  const [deliveryAddress, setDeliveryAddress] = useState({
+    type: "Home",
+    address: "Sanket Sawant, FLAT NO. 401, KHI - 25 Vastup...",
+    name: "Sanket Sawant",
+    phone: "7738470926",
+  });
+
   useEffect(() => {
     if (location.state?.appliedCoupon) {
       setAppliedCoupon(location.state.appliedCoupon);
+    }
+
+    // Check if we're returning from addresses page with a selected address
+    if (location.state?.selectedAddress) {
+      setDeliveryAddress(location.state.selectedAddress);
+      setShowAddressesPage(false);
     }
   }, [location.state]);
 
@@ -136,24 +152,46 @@ const CartPage = () => {
 
   const calculateDiscount = (coupon) => {
     const subtotal = cartItems.reduce(
-      (total, item) => total + item.price * item.quantity, 
+      (total, item) => total + item.price * item.quantity,
       0
     );
-    
-    if (coupon.type === 'percentage') {
-      const discountAmount = (subtotal * coupon.value / 100);
-      // Apply discount cap if specified
-      return coupon.maxDiscount ? Math.min(discountAmount, coupon.maxDiscount) : discountAmount;
+
+    if (coupon.type === "percentage") {
+      const discountAmount = (subtotal * coupon.value) / 100;
+      return coupon.maxDiscount
+        ? Math.min(discountAmount, coupon.maxDiscount)
+        : discountAmount;
     } else {
       return coupon.value;
     }
   };
 
+  // Address functions
+  const handleChangeAddress = () => {
+    setShowAddressesPage(true);
+  };
+
+  const handleCloseAddressesPage = () => {
+    setShowAddressesPage(false);
+  };
+
+  const handleAddressSelect = (address) => {
+    setDeliveryAddress({
+      type: address.type,
+      address: address.address,
+      name: address.name,
+      phone: address.phone,
+    });
+    setShowAddressesPage(false);
+  };
+
   const subtotal = cartItems.reduce(
-    (total, item) => total + item.price * item.quantity, 
+    (total, item) => total + item.price * item.quantity,
     0
   );
-  const discount = appliedCoupon ? parseFloat(calculateDiscount(appliedCoupon)) : 0;
+  const discount = appliedCoupon
+    ? parseFloat(calculateDiscount(appliedCoupon))
+    : 0;
   const total = subtotal + 20 - discount;
 
   return (
@@ -231,9 +269,13 @@ const CartPage = () => {
         {/* Similar Products */}
         <div className="similar-products">
           <h3 className="section-title">Similar Products</h3>
-          <div className="products-grid">
+          <div className="products-grid" style={{ gap: "0px" }}>
             {similarProducts.map((product) => (
-              <div key={product.id} className="product-card">
+              <div
+                key={product.id}
+                className="product-card"
+                style={{ border: "none" }}
+              >
                 <div className="product-image-container">
                   <img
                     src={product.image}
@@ -278,7 +320,7 @@ const CartPage = () => {
                   Discount ({appliedCoupon.code})
                   <span className="info-icon">?</span>
                 </p>
-                <p className="summary-value" style={{color: 'green'}}>
+                <p className="summary-value" style={{ color: "green" }}>
                   -₹{calculateDiscount(appliedCoupon).toFixed(2)}
                 </p>
               </div>
@@ -307,15 +349,32 @@ const CartPage = () => {
                 <MdHomeFilled />
               </div>
               <div className="delivery-text">
-                <h4>Delivering to Home</h4>
-                <p>Sanket Sawant, FLAT NO. 401, KHI - 25 Vastup...</p>
+                <h4>Delivering to {deliveryAddress.type}</h4>
+                <p>
+                  {deliveryAddress.name}, {deliveryAddress.address}
+                </p>
               </div>
             </div>
-            <button className="change-btn">Change</button>
+            <button className="change-btn" onClick={handleChangeAddress}>
+              Change
+            </button>
           </div>
           <button className="checkout-btn">Proceed to Checkout</button>
         </div>
       </div>
+
+      {/* Addresses Page as Bottom Sheet */}
+      {showAddressesPage && (
+        <div className="addresses-bottom-sheet">
+          <div className="addresses-sheet-content">
+            <AddressesPage
+              onAddressSelect={handleAddressSelect}
+              onClose={handleCloseAddressesPage}
+              fromCart={true} // Add this prop to indicate it's opened from cart
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

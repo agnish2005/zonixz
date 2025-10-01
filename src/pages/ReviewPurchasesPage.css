@@ -1,0 +1,392 @@
+/* ReviewPurchasesPage.css - Mobile & Tablet Focused */
+
+.rpp-container {
+  max-width: 400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 90px; /* Space for fixed button */
+}
+
+.rpp-header {
+  background-color: #ffffff;
+  padding: 16px 0px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.rpp-back-button {
+  background: none;
+  border: none;
+  padding: 8px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  transition: background-color 0.2s ease;
+}
+
+
+.rpp-back-icon {
+  font-size: 24px;
+  color: #333;
+}
+
+.rpp-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.rpp-content {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.rpp-product-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e0e0e0b7 !important;
+  display: flex;
+  gap: 20px;
+  border: none;
+}
+
+.rpp-product-image {
+  border-radius: 10px 0px 0px 10px;
+  width: 120px;
+  height: 130px;
+  object-fit: cover;
+}
+
+.rpp-product-info {
+  padding: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rpp-product-name {
+  font-size: 14px;
+  font-weight: 550;
+  color: #333;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.rpp-stars-container {
+  display: flex;
+  gap: 0px;
+  align-items: center;
+}
+
+.rpp-star {
+  font-size: 16px;
+  color: #ffd700;
+  text-shadow: none;
+  margin-right: 0px;
+}
+
+.rpp-star-empty {
+  color: #ddd;
+}
+
+.rpp-star-filled {
+  color: #ffd700;
+}
+
+.rpp-star-interactive {
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.rpp-star-interactive:hover {
+  transform: scale(1.1);
+}
+
+/* Add this new class for larger stars */
+.rpp-stars-large .rpp-star {
+  font-size: 28px;
+}
+
+.rpp-add-review-link {
+  background: none;
+  border: none;
+  color: #1a73e8;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.rpp-add-review-link:hover {
+  color: #0056b3;
+}
+
+.rpp-submit-ratings-button {
+  background-color: #ffc107;
+  border: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  transition: background-color 0.2s ease;
+  z-index: 10;
+  margin-bottom: 20px; /* Added bottom margin */
+}
+
+.rpp-submit-ratings-button:hover {
+  background-color: #ffb300;
+}
+
+/* Add Review Page Styles */
+
+.rpp-add-review-content {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex: 1;
+}
+
+.rpp-product-card-small {
+  background-color: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  gap: 16px;
+  border: none;
+}
+
+.rpp-product-image-small {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  object-fit: cover;
+  background-color: #f1f3f4;
+}
+
+.rpp-product-info-small {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.rpp-product-name-small {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.rpp-rating-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.rpp-rating-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+.rpp-review-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rpp-review-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+.rpp-review-textarea {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 14px;
+  color: #333;
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.rpp-review-textarea:focus {
+  border-color: #007bff;
+}
+
+.rpp-review-textarea::placeholder {
+  color: #999;
+}
+
+.rpp-upload-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rpp-upload-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  margin: 0;
+}
+
+.rpp-select-images-button {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.rpp-select-images-button:hover {
+  border-color: #007bff;
+  background-color: #f0f8ff;
+  color: #007bff;
+}
+
+.rpp-submit-button {
+  background-color: #ffc107;
+  border: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  transition: background-color 0.2s ease;
+  z-index: 10;
+  margin-bottom: 20px; /* Added bottom margin */
+}
+
+.rpp-submit-button:hover {
+  background-color: #ffb300;
+}
+
+/* Mobile First Approach - Default styles are for mobile */
+.rpp-submit-ratings-button,
+.rpp-submit-button {
+  margin-bottom: 20px; /* Consistent bottom margin for all devices */
+}
+
+/* Tablet Styles (min-width: 481px) */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .rpp-container {
+    max-width: 500px;
+  }
+  
+  .rpp-product-image {
+    width: 140px;
+    height: 150px;
+  }
+  
+  .rpp-product-name {
+    font-size: 16px;
+  }
+  
+  .rpp-submit-ratings-button,
+  .rpp-submit-button {
+    max-width: 440px;
+    margin-bottom: 20px; /* Consistent bottom margin for tablets */
+  }
+  
+  .rpp-content,
+  .rpp-add-review-content {
+    padding: 24px;
+  }
+}
+
+/* Large Mobile Devices (min-width: 376px) */
+@media (min-width: 376px) and (max-width: 480px) {
+  .rpp-submit-ratings-button,
+  .rpp-submit-button {
+    margin-bottom: 20px; /* Consistent bottom margin */
+  }
+}
+
+/* Small Mobile Devices (max-width: 375px) */
+@media (max-width: 375px) {
+  .rpp-container {
+    padding-bottom: 80px;
+  }
+  
+  .rpp-header {
+    padding: 12px 0px;
+  }
+  
+  .rpp-content {
+    padding: 16px;
+  }
+  
+  .rpp-add-review-content {
+    padding: 16px;
+  }
+  
+  .rpp-product-image {
+    width: 100px;
+    height: 110px;
+  }
+  
+  .rpp-product-name {
+    font-size: 13px;
+  }
+  
+  .rpp-submit-ratings-button,
+  .rpp-submit-button {
+    width: calc(100% - 32px);
+    font-size: 15px;
+    padding: 14px 20px;
+    margin-bottom: 20px; /* Consistent bottom margin for small devices */
+  }
+}
+
+/* Safe area support for devices with notches */
+@supports(padding: max(0px)) {
+  .rpp-submit-ratings-button,
+  .rpp-submit-button {
+    bottom: max(33px, env(safe-area-inset-bottom));
+    margin-bottom: max(33px, env(safe-area-inset-bottom));
+  }
+}

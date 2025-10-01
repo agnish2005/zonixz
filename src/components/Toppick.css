@@ -1,103 +1,373 @@
-/* Main container */
-.toppick-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 8px;
-  
+/* Main Container */
+.toppick-main-container {
+  padding: 20px 16px;
 }
 
-/* Title */
-.toppick-title {
-  padding: 0 5px;
+/* Header Section */
+.toppick-header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 0px;
-  font-size: 15px;
-  color: #333;
 }
 
-/* Scroll container */
-.toppick-cards-scroll-container {
+.toppick-main-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #2c3e50;
+  margin-top: 15px;
+  line-height: 1.2;
+}
+
+.toppick-show-all-link {
+  font-size: 16px;
+  color: #f4c430;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.toppick-show-all-link:hover {
+  color: #e6b800;
+}
+
+/* Banner Section */
+.toppick-banner-container {
   width: 100%;
-  overflow-x: auto;
-  padding-bottom: 20px; /* Space for scrollbar */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  margin:  0;
 }
 
-/* Hide scrollbar for cleaner look (optional) */
-.toppick-cards-scroll-container::-webkit-scrollbar {
+.toppick-banner-image {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Products Grid */
+.toppick-products-grid {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.toppick-products-grid::-webkit-scrollbar {
   display: none;
 }
 
-/* Cards wrapper */
-.toppick-cards-wrapper {
-  display: flex;
-  gap: 20px;
-  width: max-content; /* Allows horizontal expansion */
-  padding: 10px 0px; /* Padding for visual spacing */
-}
-
-/* Individual card */
-.toppick-card {
-  width: 200px; /* Fixed width for scrollable cards */
-  height: auto;
-  min-width: 200px; /* Prevents card from shrinking */
-  border: 1px solid #e0e0e0;
-
+/* Product Card */
+.toppick-product-card {
+  background: white;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
+  min-width: 280px;
 }
 
-/* Card image */
-.toppick-card-image {
+/* Image Container */
+.toppick-image-container {
+  position: relative;
   width: 100%;
   height: 200px;
+  overflow: hidden;
+}
+
+.toppick-product-image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-/* Card content */
-.toppick-card-content {
-  padding: 15px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.toppick-card-title {
-  margin: 0 0 10px 0;
-  font-size: 18px;
-  color: #222;
-}
-
-.toppick-card-description {
-  margin: 0 0 10px 0;
-  font-size: 14px;
-  color: #666;
-  flex-grow: 1;
-}
-
-.toppick-card-price {
-  margin: 10px 0;
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Add to cart button */
-.toppick-card-button {
-  height: 70px;
-  width: 100%;
-  background-color: #1a73e8;
+.toppick-discount-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #cc8400;
   color: white;
-  border: none;
-  border-radius: 2px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  padding: 2px 4px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 500;
 }
 
-.toppick-card-button:hover {
-  background-color: #0d5bba;
+.toppick-heart-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toppick-heart-svg {
+  color: #2c3e50;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.toppick-heart-icon:hover .toppick-heart-svg {
+  color: #e74c3c;
+}
+
+/* Content Section */
+.toppick-content-section {
+  padding: 0px;
+}
+
+.toppick-product-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2c3e50;
+  margin: 10px 0 0 0;
+  line-height: 1.3;
+}
+
+.toppick-product-sku {
+  font-size: 10px;
+  color: #95a5a6;
+  margin: 5px 0 0 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Rating Section */
+.toppick-rating-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 0px;
+}
+
+.toppick-rating-number {
+  font-size: 13px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.toppick-stars-wrapper {
+  display: flex;
+  gap: 2px;
+}
+
+.toppick-star {
+  font-size: 12px;
+}
+
+.toppick-star-filled {
+  color: #f4c430;
+}
+
+.toppick-star-empty {
+  color: #e0e0e0;
+}
+
+.toppick-reviews-count {
+  font-size: 11px;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+/* Price Section */
+.toppick-price-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.toppick-current-price {
+  font-size: 18px;
+  font-weight: 520;
+  color: #2c3e50;
+}
+
+.toppick-mrp-price {
+  font-size: 12px;
+  color: #95a5a6;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+/* Add to Cart Button */
+.toppick-add-to-cart-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ffd700;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.toppick-add-to-cart-btn:hover {
+  background: linear-gradient(135deg, #b8770a 0%, #e6b800 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(244, 196, 48, 0.3);
+}
+
+.toppick-add-to-cart-btn:active {
+  transform: translateY(0);
+}
+
+/* Top Discount Brands Section */
+.discount-brands-container {
+  padding: 40px 16px 20px 16px;
+  background: #ffffff;
+}
+
+.discount-brands-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #D4AF37;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+.discount-brands-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.discount-brand-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.discount-brand-card:hover {
+  transform: translateY(-5px);
+}
+
+.discount-brand-image-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.discount-brand-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.discount-brand-card:hover .discount-brand-image {
+  transform: scale(1.05);
+}
+
+
+
+/* Tablet Responsive */
+@media (max-width: 768px) {
+  .toppick-main-container {
+    padding: 16px 12px;
+  }
+  
+  .toppick-main-title {
+    font-size: 22px;
+  }
+  
+  .toppick-product-card {
+    min-width: 260px;
+  }
+  
+  .toppick-image-container {
+    height: 180px;
+  }
+  
+  .toppick-products-grid {
+    gap: 5px;
+  }
+
+  .discount-brands-container {
+    padding: 30px 12px 16px 12px;
+  }
+
+  .discount-brands-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .discount-brands-grid {
+    gap: 16px;
+  }
+
+  .discount-brand-image-container {
+    height: 220px;
+  }
+
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .toppick-main-container {
+    padding: 12px 8px;
+  }
+  
+  .toppick-main-title {
+    font-size: 16px;
+  }
+  
+  .toppick-show-all-link {
+    font-size: 14px;
+  }
+  
+  .toppick-product-card {
+    width: 200px;
+    min-width: 200px;
+  }
+  
+  .toppick-image-container {
+    height: 200px;
+  }
+  
+  .toppick-product-title {
+    font-size: 13px;
+  }
+  
+  .toppick-current-price {
+    font-size: 14px;
+  }
+  
+  .toppick-add-to-cart-btn {
+    padding: 9px;
+    font-size: 10px;
+  }
+
+  .discount-brands-container {
+    padding: 25px 8px 12px 8px;
+  }
+
+  .discount-brands-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .discount-brands-grid {
+    gap: 12px;
+  }
+
+  .discount-brand-image-container {
+    height: 180px;
+  }
+
+
 }

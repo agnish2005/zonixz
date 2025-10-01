@@ -1,0 +1,472 @@
+/* Main Container - Mobile First (800px and below) */
+.ultra_unique_addresses_container {
+  max-width: 800px;
+  height: 70vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Header Section */
+.ultra_unique_header_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 16px;
+  background-color: #ffffff;
+  position: relative;
+  margin-top: 5px;
+}
+
+.ultra_unique_back_button {
+  background: none;
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ultra_unique_back_arrow_icon {
+  font-size: 22px;
+  color: #333333;
+}
+
+.ultra_unique_page_title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333333;
+  text-align: center;
+}
+
+/* Content Wrapper */
+.ultra_unique_content_wrapper {
+  padding: 0;
+}
+
+/* Delivery Section */
+.ultra_unique_delivery_section {
+  padding: 0px 16px 0px 16px;
+  background-color: #ffffff;
+}
+
+.ultra_unique_delivery_title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.ultra_unique_add_address_button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 14px 14px;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+
+
+.ultra_unique_plus_icon {
+  font-size: 18px;
+  font-weight: 400;
+  color: #666666;
+  margin-right: 12px;
+  line-height: 1;
+}
+
+.ultra_unique_add_text {
+  font-size: 14px;
+  color: #333333;
+  font-weight: 400;
+}
+
+/* Saved Addresses Section - REDUCED SIZE */
+.ultra_unique_saved_section {
+  background-color: #ffffff;
+  padding: 0px 16px 16px 16px; /* Reduced bottom padding */
+}
+
+.ultra_unique_saved_title {
+  font-size: 13px; /* Smaller font */
+  color: #999999;
+  margin-bottom: 12px; /* Reduced margin */
+  font-weight: 400;
+}
+
+.ultra_unique_addresses_list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Reduced gap between cards */
+}
+
+.ultra_unique_address_card {
+  background-color: #ffffff !important;
+  border: 1px solid #cccccc5d !important;
+  border-radius: 8px;
+  padding: 12px; /* Reduced padding */
+  border: none;
+}
+
+.ultra_unique_address_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px; /* Reduced margin */
+}
+
+.ultra_unique_address_type_info {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Reduced gap */
+}
+
+.ultra_unique_address_type_icon {
+  font-size: 16px; /* Smaller icon */
+  color: #333333;
+}
+
+.ultra_unique_address_type_label {
+  font-size: 14px; /* Smaller font */
+  font-weight: 500;
+  color: #333333;
+}
+
+.ultra_unique_action_buttons {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Reduced gap */
+}
+
+.ultra_unique_edit_button,
+.ultra_unique_delete_button {
+  background: none;
+  border: none;
+  padding: 4px; /* Reduced padding */
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.ultra_unique_edit_button:active {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.ultra_unique_delete_button:active {
+  background-color: rgba(255, 0, 0, 0.05);
+}
+
+.ultra_unique_edit_icon {
+  font-size: 14px; /* Smaller icon */
+  color: #666666;
+}
+
+.ultra_unique_delete_icon {
+  font-size: 14px; /* Smaller icon */
+  color: #ef4444;
+}
+
+.ultra_unique_address_details {
+  line-height: 1.3; /* Tighter line height */
+}
+
+.ultra_unique_address_text {
+  font-size: 12px; /* Smaller font */
+  color: #666666;
+  margin-bottom: 4px; /* Reduced margin */
+  line-height: 1.3;
+}
+
+.ultra_unique_contact_info {
+  font-size: 11px; /* Smaller font */
+  color: #666666;
+  margin-bottom: 1px; /* Reduced margin */
+  line-height: 1.2; /* Tighter line height */
+}
+
+/* Modal Styles */
+.ultra_unique_modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.ultra_unique_modal_content {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px 12px 0 0 ;
+  max-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  animation: slideUpModal 0.25s ease-out;
+}
+
+@keyframes slideUpModal {
+  from {
+    transform: translateY(100%);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.ultra_unique_modal_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px 0 20px;
+  position: sticky;
+  top: 0;
+  border-radius: 20px 20px 0 0 ;
+  background-color: #ffffff;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.ultra_unique_modal_title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.ultra_unique_close_button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ultra_unique_close_icon {
+  font-size: 20px;
+  color: #666666;
+}
+
+.ultra_unique_modal_body {
+  padding: 0 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Address Type Selection */
+.ultra_unique_address_type_section {
+  margin-bottom: 20px; /* Reduced margin */
+}
+
+.ultra_unique_section_label {
+  font-size: 13px;
+  color: #666666;
+  margin-bottom: 10px; /* Reduced margin */
+  margin-top: 14px; /* Reduced margin */
+  font-weight: 400;
+}
+
+.ultra_unique_type_buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px; /* Reduced gap */
+}
+
+.ultra_unique_type_button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3px; /* Reduced gap */
+  padding: 2px 6px; /* Reduced padding */
+  border: 1.5px solid #e5e5e5;
+  border-radius: 6px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 36px; /* Reduced height */
+  justify-content: center;
+}
+
+.ultra_unique_type_button:active {
+  transform: scale(0.98);
+}
+
+.ultra_unique_type_selected {
+  border-color: #ffb800 !important;
+  background-color: #fff9e6 !important;
+}
+
+.ultra_unique_type_button_icon {
+  font-size: 14px; /* Smaller icon */
+  color: #333333;
+}
+
+.ultra_unique_type_button_text {
+  font-size: 10px; /* Smaller font */
+  color: #333333;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Form Fields */
+.ultra_unique_form_section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Reduced gap */
+  margin-bottom: 14px; /* Reduced margin */
+}
+
+.ultra_unique_input_group {
+  width: 100%;
+}
+
+.ultra_unique_input_field {
+  width: 100%;
+  padding: 12px 14px; /* Reduced padding */
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  font-size: 12px;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease;
+ 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.ultra_unique_input_field:focus {
+  outline: none;
+  border-color: #999999;
+}
+
+.ultra_unique_input_field::placeholder {
+  color: #aaaaaa;
+  font-weight: 400;
+}
+
+.ultra_unique_required_field::placeholder {
+  color: #333333;
+}
+
+/* Modal Footer */
+.ultra_unique_modal_footer {
+  margin-bottom: 60px; /* Reduced margin for navbar */
+  padding: 5px 20px 0 20px;
+  position: sticky;
+  bottom: 0;
+  background-color: #ffffff;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.ultra_unique_save_button {
+  width: 100%;
+  padding: 12px; /* Reduced padding */
+  background-color: #ffb800;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px; /* Smaller font */
+  font-weight: 500;
+  color: #333333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ultra_unique_save_button:active {
+  background-color: #ff9800;
+  transform: scale(0.98);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 400px) {
+  .ultra_unique_delivery_section,
+  .ultra_unique_saved_section {
+    padding: 0px 12px 0px 12px;
+  }
+  
+  .ultra_unique_saved_section {
+    padding-bottom: 12px; /* Further reduced */
+  }
+  
+  .ultra_unique_modal_body {
+    padding: 14px; /* Reduced padding */
+  }
+  
+  .ultra_unique_modal_footer {
+    padding: 12px 14px; /* Reduced padding */
+  }
+  
+  .ultra_unique_type_buttons {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px; /* Further reduced */
+  }
+  
+  .ultra_unique_type_button {
+    padding: 8px 4px; /* Further reduced */
+    min-height: 45px; /* Further reduced */
+  }
+  
+  .ultra_unique_type_button_text {
+    font-size: 9px; /* Smaller font */
+  }
+  
+  /* Even smaller address cards on very small screens */
+  .ultra_unique_address_card {
+    padding: 10px; /* Further reduced */
+  }
+  
+  .ultra_unique_address_type_icon {
+    font-size: 14px;
+  }
+  
+  .ultra_unique_address_type_label {
+    font-size: 13px;
+  }
+  
+  .ultra_unique_address_text {
+    font-size: 11px;
+  }
+  
+  .ultra_unique_contact_info {
+    font-size: 10px;
+  }
+}
+
+/* Large Mobile Devices */
+@media (min-width: 600px) and (max-width: 800px) {
+  .ultra_unique_delivery_section,
+  .ultra_unique_saved_section {
+    padding: 0px 20px 0px 20px;
+  }
+  
+  .ultra_unique_saved_section {
+    padding-bottom: 16px;
+  }
+  
+  .ultra_unique_modal_body {
+    padding: 20px; /* Slightly reduced */
+  }
+  
+  .ultra_unique_modal_footer {
+    padding: 16px 20px; /* Slightly reduced */
+  }
+}

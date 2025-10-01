@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Profile.css";
 import marble1 from "../assets/Image/marble1.webp";
 import marble2 from "../assets/Image/marble2.jpg";
@@ -10,15 +11,17 @@ import backgroundImage from "../assets/Image/new.png";
 import buy1 from "../assets/Image/buy1.png";
 import your from "../assets/Image/your.png";
 import wishlist from "../assets/Image/wishlist.png";
-import addressIcon from "../assets/Image/location.png"; 
-import purchaseIcon from "../assets/Image/setting.png"; 
-import reviewIcon from "../assets/Image/rating.png"; 
-import recentIcon from "../assets/Image/trolley.png"; 
-import paymentIcon from "../assets/Image/operation.png"; 
-import closeAccountIcon from "../assets/Image/closeacc.png"; 
-import logoutIcon from "../assets/Image/logout.png"; 
+import addressIcon from "../assets/Image/location.png";
+import purchaseIcon from "../assets/Image/setting.png";
+import reviewIcon from "../assets/Image/rating.png";
+import recentIcon from "../assets/Image/trolley.png";
+import paymentIcon from "../assets/Image/operation.png";
+import closeAccountIcon from "../assets/Image/closeacc.png";
+import logoutIcon from "../assets/Image/logout.png";
 
 const Profile = () => {
+  const navigate = useNavigate();
+
   // Sample data - replace with your actual data
   const orderItems = [
     {
@@ -104,50 +107,50 @@ const Profile = () => {
       icon: addressIcon,
       title: "Your Addresses",
       subtitle: "Manage your saved addresses.",
-      onClick: () => console.log("Navigate to addresses")
+      onClick: () => navigate("/addresses", { state: { fromProfile: true } }), // Add navigation state
     },
     {
       id: 2,
       icon: purchaseIcon,
       title: "Default Purchase Settings",
       subtitle: "Manage your default purchase settings.",
-      onClick: () => console.log("Navigate to purchase settings")
+      onClick: () => navigate("/purchase-settings"),
     },
     {
       id: 3,
       icon: reviewIcon,
       title: "Review Your Purchases",
       subtitle: "View your past purchases and leave feedback.",
-      onClick: () => console.log("Navigate to reviews")
+      onClick: () => navigate("/review-purchases"),
     },
     {
       id: 4,
       icon: recentIcon,
       title: "Your Recently View Items",
       subtitle: "View your recently viewed items.",
-      onClick: () => console.log("Navigate to recent items")
+      onClick: () => navigate("/recently-viewed"),
     },
     {
       id: 5,
       icon: paymentIcon,
       title: "Manage Payment Option",
       subtitle: "Add, remove, or edit your payment methods.",
-      onClick: () => console.log("Navigate to payment options")
+      onClick: () => console.log("Navigate to payment options"),
     },
     {
       id: 6,
       icon: closeAccountIcon,
       title: "Close Your zonixzz Account",
       subtitle: "Permanently close your zonixzz account.",
-      onClick: () => console.log("Navigate to close account")
+      onClick: () => console.log("Navigate to close account"),
     },
     {
       id: 7,
       icon: logoutIcon,
       title: "Logout",
       subtitle: "Logout from your zonixzz account.",
-      onClick: () => console.log("Logout user")
-    }
+      onClick: () => console.log("Logout user"),
+    },
   ];
 
   // Function to handle add to cart
@@ -230,8 +233,8 @@ const Profile = () => {
               </div>
             </div>
             <div>
-                <button className="ecomm-see-all-btn">See All</button>
-              </div>
+              <button className="ecomm-see-all-btn">See All</button>
+            </div>
           </div>
 
           <div className="ecomm-items-row">
@@ -265,8 +268,8 @@ const Profile = () => {
               </div>
             </div>
             <div>
-                <button className="ecomm-see-all-btn">See All</button>
-              </div>
+              <button className="ecomm-see-all-btn">See All</button>
+            </div>
           </div>
 
           {/* Products Grid (from CartPage.js) */}
@@ -303,8 +306,8 @@ const Profile = () => {
         <div className="ecomm-section-wrapper">
           <div className="account-menu-container">
             {accountMenuItems.map((item) => (
-              <div 
-                key={item.id} 
+              <div
+                key={item.id}
                 className="account-menu-item"
                 onClick={item.onClick}
               >

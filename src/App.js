@@ -19,9 +19,15 @@ import Coupon from './pages/Coupon';
 import CreateAccountPage from './pages/CreateAccountPage';
 import SignInPage from './pages/SignInPage';
 import Sidebar from './components/Sidebar';
-import OTPVerificationPage from './pages/OTPVerificationPage'; // Import OTP page
+import OTPVerificationPage from './pages/OTPVerificationPage';
 import Profile from './pages/Profile'; 
-import Filter from './pages/Filter'; // Import Filter component
+import Filter from './pages/Filter';
+import Categorylist from './pages/Categorielist';
+import Details from './pages/Details';
+import AddressesPage from './pages/AddressesPage';
+import PurchaseSettingsPage from './pages/PurchaseSettingsPage';
+import ReviewPurchasesPage from './pages/ReviewPurchasesPage';
+import RecentlyViewedPage from './pages/RecentlyViewedPage';
 
 // Home page component
 const HomePage = () => (
@@ -45,16 +51,36 @@ function AppContent() {
     setSidebarOpen(false);
   };
 
+  // Determine if we should hide the AppBar
+  const shouldHideAppBar = () => {
+    const path = location.pathname;
+    return (
+      path.includes('/account') ||
+      path.includes('/verify-otp') ||
+      path.includes('/category/') ||
+      path.includes('/addresses') ||
+      path.includes('/purchase-settings') ||
+      path.includes('/review-purchases') ||
+      path.includes('/recently-viewed')
+    );
+  };
+
+  // Determine if we should hide the BottomNavigation
+  const shouldHideBottomNav = () => {
+    return location.pathname.includes('/verify-otp');
+  };
+
   return (
     <Box sx={{ 
       display: 'flex',
-      pb: { xs: 7, sm: 0 } 
+      flexDirection: 'column',
+      minHeight: '100vh',
+      pb: { xs: shouldHideBottomNav() ? 0 : 7, sm: 0 } 
     }}>
       <CssBaseline />
       
-      {/* AppBar - Hide on account page for cleaner UI */}
-      {!location.pathname.includes('/account') && 
-       !location.pathname.includes('/verify-otp') && (
+      {/* AppBar - Hide on account, OTP, and category pages */}
+      {!shouldHideAppBar() && (
         <CustomAppBar toggleSidebar={toggleSidebar} />
       )}
       
@@ -71,10 +97,10 @@ function AppContent() {
       <Box 
         component="main" 
         sx={{ 
+          flexGrow: 1,
           width: '100%',
-          marginTop: !location.pathname.includes('/account') && 
-                    !location.pathname.includes('/verify-otp') ? '20px' : 0,
-          marginBottom: { xs: '0px', sm: 0 } 
+          marginTop: !shouldHideAppBar() ? '25px' : 0, // Adjust based on AppBar height
+          padding: 0
         }}
       >
         <Routes>
@@ -86,16 +112,21 @@ function AppContent() {
           <Route path="/coupons" element={<Coupon />} />
           <Route path="/account/create" element={<CreateAccountPage />} />
           <Route path="/account/signin" element={<SignInPage />} />
-          {/* Add these new routes */}
           <Route path="/verify-otp" element={<OTPVerificationPage />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/filter" element={<Filter />} />
+          <Route path="/category-list" element={<Categorylist />} />
+          <Route path="/details" element={<Details />} />
+          {/* New routes for account menu items */}
+          <Route path="/addresses" element={<AddressesPage />} />
+          <Route path="/purchase-settings" element={<PurchaseSettingsPage />} />
+          <Route path="/review-purchases" element={<ReviewPurchasesPage />} />
+          <Route path="/recently-viewed" element={<RecentlyViewedPage />} />
         </Routes>
       </Box>
       
-      {/* Bottom Navigation - Hide on OTP and Profile pages */}
-      {!location.pathname.includes('/verify-otp') && 
-        (
+      {/* Bottom Navigation - Hide only on OTP */}
+      {!shouldHideBottomNav() && (
         <BottomNavigationBar />
       )}
     </Box>

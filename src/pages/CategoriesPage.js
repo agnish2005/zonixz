@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import './CategoriesPage.css'; // Assuming you have a CSS file for styling
+import { useNavigate } from 'react-router-dom';
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
+import './CategoriesPage.css';
 import cement from '../assets/Image/a.png';
 import b from '../assets/Image/b.png';
 import c from '../assets/Image/c.png';
 
 const CategoriesPage = () => {
   const [expandedCategories, setExpandedCategories] = useState({});
+  const navigate = useNavigate();
 
   const categoriesData = [
     {
@@ -65,6 +68,15 @@ const CategoriesPage = () => {
     }));
   };
 
+  const handleSubcategoryClick = (categoryName, subcategoryName) => {
+    // Navigate to the category list page with state
+    navigate('/category-list', { 
+      state: { 
+        subcategoryName: subcategoryName 
+      } 
+    });
+  };
+
   return (
     <div className="categories-page-main">
       {categoriesData.map((category) => (
@@ -98,16 +110,22 @@ const CategoriesPage = () => {
             </div>
             
             <div className="category-dropdown-arrow">
-              <span className={`arrow-icon-main ${expandedCategories[category.id] ? 'arrow-up' : 'arrow-down'}`}>
-                ❯
-              </span>
+              {expandedCategories[category.id] ? (
+                <IoIosArrowUp className="arrow-icon-main" />
+              ) : (
+                <IoIosArrowDown className="arrow-icon-main" />
+              )}
             </div>
           </div>
           
           {expandedCategories[category.id] && (
             <div className="category-expanded-list">
               {category.subcategories.map((subcategory, index) => (
-                <div key={index} className="subcategory-item-main">
+                <div 
+                  key={index} 
+                  className="subcategory-item-main"
+                  onClick={() => handleSubcategoryClick(category.name, subcategory)}
+                >
                   {subcategory}
                 </div>
               ))}
